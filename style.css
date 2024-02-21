@@ -1,0 +1,136 @@
+/* Importing font style */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Resetting values and declaring custom properties in the root */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Custom properties */
+  /* Colors and backgroundcolors */
+  --location-color: hsl(75, 94%, 57%);
+  --main-color:  hsl(0, 0%, 100%);
+  --btn-bgc: hsl(0, 0%, 20%);
+  --wrapper-bgc: hsl(0, 0%, 12%);
+  --main-bgc: hsl(0, 0%, 8%);
+
+  /* Spacing */
+  --general-margin-bottom: 24px;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: var(--main-color);
+  background-color: var(--main-bgc);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  background-color: var(--wrapper-bgc);
+  width: 384px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.header {
+  text-align: center;
+}
+
+.header .profile-picture {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  margin-bottom: var(--general-margin-bottom);
+}
+.header .profile-picture img{
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header .name-location {
+  margin-bottom: var(--general-margin-bottom);
+}
+
+.header .name-location h1 {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+.header .name-location p {
+  color: var(--location-color);
+  font-weight: 700;
+  padding-bottom: 5px;
+} 
+
+.header P {
+  margin-bottom: var(--general-margin-bottom);
+}
+
+main {
+  margin-bottom: var(--general-margin-bottom);
+}
+
+main .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-direction: column;
+}
+
+main .links .btn-styles {
+  font-weight: 600;
+  background-color: var(--btn-bgc);
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+}
+
+main .links .btn-styles:hover{
+  background-color: var(--location-color);
+  cursor: pointer;
+}
+
+main .links .btn-styles:hover a {
+  color: var(--btn-bgc);
+  width: 327px;
+}
+
+/* Attribution style given by FrontEndMentor */
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+   color: var(--main-color);
+   text-decoration: underline;
+}
+
+/* Layout for the mobile design */
+@media only screen and (max-width: 375px)
+{
+   body {
+    max-width: 375px;
+   }
+
+   .wrapper {
+    width: 327px;
+   }
+}
